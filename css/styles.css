@@ -76,7 +76,7 @@ header img{
     position: absolute; /*Nos permite movernos entre div´s
     izquierda, derecha, arriba, abajo*/
     left: calc(50% - 120px); /*Para centrarlo*/
-    top: calc(100% - 24px);
+    top: calc(100% - 60px);
     display: block;
     margin-top: 3.5rem;
     padding: 15px;
@@ -99,16 +99,52 @@ header img{
     margin-left: 10px;
     background-image: url(/assets/icons/down-arrow.svg);
 }
-body{
-    /*
-    --bitcoin-orange: #f7931a;
---soft-orange: #ffe9d5;
---secondary-blue: #1a9af7;
---soft-blue: #e7f5ff;
---warm-black: #282623;
---black: #201e1c;
---grey: #bababa;
---off-white: #faf8f7;
---just-white: #fff;
-*/
+main{
+   width: 100%;
+   height: auto;
+   min-width: 320px;
+   background-color: var(--off-white);
+}
+.section1
+{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+.section1--text
+{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto; /*Se posiciona al centro*/
+}
+.section1--background
+{
+    /*Sin dimensiones, como este div está vacío, no se vería*/
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url(/assets/img/Bitcoin.svg);
+    background-size: cover; /*Hace que no se escale la imagen*/
+    background-position: center;
+    background-repeat: no-repeat; /*Para que no se repita en el div*/
+}
+.section1--text h2
+{
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.section1--text p
+{
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
 }
