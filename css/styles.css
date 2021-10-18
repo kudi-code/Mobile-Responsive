@@ -24,7 +24,7 @@
 }
 html {
     font-size: 62.7%; /*?para hacer uso del rem y no de px*/
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif; /*Font por defecto*/
     /*font-family: 'Inter', sans-serif; */
 }
 header {
@@ -70,6 +70,34 @@ header img{
     font-weight: 500;
     line-height: 1.8rem;
     color: var(--soft-orange);
+}
+.header--title-container .header--button
+{
+    position: absolute; /*Nos permite movernos entre div´s
+    izquierda, derecha, arriba, abajo*/
+    left: calc(50% - 120px); /*Para centrarlo*/
+    top: 270px;
+    display: block;
+    margin-top: 3.5rem;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    /*Sombra*/
+    box-shadow: 0px 4px 8px rgba(167, 135, 48, 0.20);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+}
+.header--button span
+{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url(/assets/icons/down-arrow.svg);
 }
 body{
     /*
