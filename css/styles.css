@@ -97,7 +97,7 @@ header img{
     width: 13px;
     height: 8px;
     margin-left: 10px;
-    background-image: url(/assets/icons/down-arrow.svg);
+    background-image: url(assets/icons/down-arrow.svg);
 }
 main{
    width: 100%;
@@ -127,7 +127,7 @@ main{
     height: 200px;
     margin: 0 auto;
     margin-bottom: 50px;
-    background-image: url(/assets/img/Bitcoin.svg);
+    background-image: url(assets/img/Bitcoin.svg);
     background-size: cover; /*Hace que no se escale la imagen*/
     background-position: center;
     background-repeat: no-repeat; /*Para que no se repita en el div*/
@@ -254,7 +254,7 @@ main{
 }
 .table__right .down{
     display: inline-block;
-    background-image: url(/assets/icons/trending-down.svg);
+    background-image: url(assets/icons/trending-down.svg);
     background-position: center ;
     background-repeat: no-repeat;
     width: 15px;
@@ -263,7 +263,7 @@ main{
 }
 .table__right .up{
     display: inline-block;
-    background-image: url(/assets/icons/trending-up.svg);
+    background-image: url(assets/icons/trending-up.svg);
     background-position: center ;
     background-repeat: no-repeat;
     width: 15px;
