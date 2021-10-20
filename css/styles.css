@@ -150,14 +150,33 @@ main{
     line-height: 1.6rem;
     color: #757575;
 }
+
+/*Inicia el caos*/
+.section-tables-container
+{
+    display: inline-flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 80%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 320px;
+    margin: 0 auto;
+}
+.section-tables-container::-webkit-scrollbar
+{
+    display: none;
+}
+/*Termina el caos*/
 .section1--section-table--title , .section2--section-table--title
 {
     /*Container de monedas y la tabla*/
     width: 70%;
     min-width: 235px;
     max-width: 500px;
-    height: 360px;
+    height: 280px;
     margin: 0 auto;
+    margin-right: 80px;
     font-family: 'Inter', sans-serif;
 }
 .section1--section-table--title .table--title
@@ -173,22 +192,25 @@ main{
 .section2--section-table--title .table--title
 {
     /*Monedas*/
-    margin-top: 40px;
     margin-bottom: 15px;
     font-size: 18px;
     font-weight: bold;
     line-height: 2.3rem;
     color: var(--secondary-blue);
-    text-align: left;    
+    text-align: left;
+    margin-left: 0px;    
 }
 .section1--section-table--container , .section2--section-table--container
 {
     /*Div de la tabla*/
-    width: 90%;
+    width: 70%;
     min-width: 230px;
     max-width: 300px;
-    height: 300px;
-    margin: 0 auto;
+    height: 180px;    
+}
+.section2--section-table--container
+{
+    margin-left: 0px;
 }
 .section1--section-table--container table , .section2--section-table--container table
 {
@@ -248,16 +270,17 @@ main{
     margin-left: 10px;
     height: 15px;
 }
-.section2--section-table .table2--update
+.table2--update
 {
     max-width: 800px;
     margin-top: 16px;
     padding: 10px;
     text-align: center;
     border-radius: 8px;
-    background-color: var(--soft-blue);    
+    background-color: var(--soft-blue);  
+    margin-left: 0px;  
 }
-.section1--section-table .table1--update
+.table1--update
 {
     max-width: 800px;
     margin-top: 16px;
@@ -275,4 +298,35 @@ main{
 }
 .table1--update b , .table2--update b{
     font-weight: 700;
+}
+/*Flechas*/
+/*.table-go-right
+{
+    display: flex;
+    transform: translatex(calc(50% + 150px)) translatey(calc(50% - 200px));
+    top: 60px;
+    right: -40px;
+    padding: 15px;
+    top: calc(50% - 20px); 
+}
+*/
+.table-go-right{
+    position: absolute; /*Nos permite movernos entre div´s
+    izquierda, derecha, arriba, abajo*/
+    left: calc(50% + 140px); /*Para centrarlo*/
+    top: calc(100% + 215px);
+    /*display: block; */
+    width: 10px;
+    height: 10px;
+}
+.table-go-left
+{
+    position: absolute; /*Nos permite movernos entre div´s
+    izquierda, derecha, arriba, abajo*/
+    left: calc(50% - 140px); /*Para centrarlo*/
+    top: calc(100% + 215px);
+    /*display: block; */
+    width: 10px;
+    height: 10px;
+    
 }
