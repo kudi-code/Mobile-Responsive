@@ -173,6 +173,7 @@ main{
 .section2--section-table--title .table--title
 {
     /*Monedas*/
+    margin-top: 40px;
     margin-bottom: 15px;
     font-size: 18px;
     font-weight: bold;
@@ -215,7 +216,7 @@ main{
 .section1--section-table--container .table__bottom-right , .section2--section-table--container .table__bottom-right{
     border-bottom-right-radius: 15px;
 }
-.section1--section-table--container .table__bottom-left , .section2--section-table--container .table__bottom-left{
+.section1--section-table--container .table__botton-left , .section2--section-table--container .table__botton-left{
     border-bottom-left-radius: 15px;
 }
 /*Todo lo que está a la izquierda*/
@@ -246,4 +247,32 @@ main{
     width: 15px;
     margin-left: 10px;
     height: 15px;
+}
+.section2--section-table .table2--update
+{
+    max-width: 800px;
+    margin-top: 16px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--soft-blue);    
+}
+.section1--section-table .table1--update
+{
+    max-width: 800px;
+    margin-top: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 10px;    
+    border-radius: 8px;
+    background-color: var(--soft-orange);    
+}
+.table1--update p , .table2--update p{
+    color: var(--warm-black);
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 300;
+}
+.table1--update b , .table2--update b{
+    font-weight: 700;
 }
