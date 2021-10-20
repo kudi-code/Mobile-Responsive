@@ -1,0 +1,3 @@
+CxP : Cuentas por pagar
+CxC : Cuentas por Cobrar
+Capital de Trabajo : 12 meses ($0 venta, pagar la nómina)
