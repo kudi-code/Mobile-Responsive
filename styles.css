@@ -1,0 +1,332 @@
+/* Orden de cada llamada CSS para buenas prácticas
+1. Posicionamiento
+2. Modelo de Caja (Box Model)
+3. Tipografía
+4. Visuales
+5. Otros
+*/
+:root{ /*Variables*/
+    --bitcoin-orange: #f7931a;
+    --soft-orange: #ffe9d5;
+    --secondary-blue: #1a9af7;
+    --soft-blue: #e7f5ff;
+    --warm-black: #282623;
+    --black: #201e1c;
+    --grey: #bababa;
+    --off-white: #faf8f7;
+    --just-white: #fff;
+    
+}
+*{ /*Quitar configuraciones por defecto del navegador*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.7%; /*?para hacer uso del rem y no de px*/
+    font-family: 'DM Sans', sans-serif; /*Font por defecto*/
+    /*font-family: 'Inter', sans-serif; */
+}
+header {
+    /*1.*/
+    position: relative; /*Para moverte desde el centro del objeto*/
+    /*2.*/
+    display: flex; /*Caja Flexible*/
+    flex-direction: column; /*Los objetos irán de arriba a abajo*/
+    justify-content: center;    
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    /*3.*/
+    text-align: center;
+    /*4.*/
+    background-image: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header img{
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center; /*Alínea la imagen al centro*/
+}
+.header--title-container
+{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 30px; /*Darle sangría*/
+    text-align: center;    
+    align-self: center;
+    color: var(--just-white);    
+}
+.header--title-container h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+}
+.header--title-container p{
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+.header--title-container .header--button
+{
+    position: absolute; /*Nos permite movernos entre div´s
+    izquierda, derecha, arriba, abajo*/
+    left: calc(50% - 120px); /*Para centrarlo*/
+    top: calc(100% - 60px);
+    display: block;
+    margin-top: 3.5rem;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    /*Sombra*/
+    box-shadow: 0px 4px 8px rgba(167, 135, 48, 0.20);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+}
+.header--button span
+{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url(/assets/icons/down-arrow.svg);
+}
+main{
+   width: 100%;
+   height: auto;
+   min-width: 320px;
+   background-color: var(--off-white);
+}
+.section1
+{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+.section1--text
+{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto; /*Se posiciona al centro*/
+}
+.section1--background
+{
+    /*Sin dimensiones, como este div está vacío, no se vería*/
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url(/assets/img/Bitcoin.svg);
+    background-size: cover; /*Hace que no se escale la imagen*/
+    background-position: center;
+    background-repeat: no-repeat; /*Para que no se repita en el div*/
+}
+.section1--text h2
+{ 
+    /*Visibilizamos todas las tasas de cambio*/
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.section1--text p
+{
+    /*Traemos información en tiempo real...*/
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
+}
+
+/*Inicia el caos*/
+.section-tables-container
+{
+    display: inline-flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 80%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 320px;
+    margin: 0 auto;
+}
+.section-tables-container::-webkit-scrollbar
+{
+    display: none;
+}
+/*Termina el caos*/
+.section1--section-table--title , .section2--section-table--title
+{
+    /*Container de monedas y la tabla*/
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 280px;
+    margin: 0 auto;
+    margin-right: 80px;
+    font-family: 'Inter', sans-serif;
+}
+.section1--section-table--title .table--title
+{
+    /*Monedas*/
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orange);
+    text-align: left;    
+}
+.section2--section-table--title .table--title
+{
+    /*Monedas*/
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+    text-align: left;
+    margin-left: 0px;    
+}
+.section1--section-table--container , .section2--section-table--container
+{
+    /*Div de la tabla*/
+    width: 70%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 180px;    
+}
+.section2--section-table--container
+{
+    margin-left: 0px;
+}
+.section1--section-table--container table , .section2--section-table--container table
+{
+    /*Tabla*/
+    width: 100%;
+    height: 100%;    
+}
+.section1--section-table--container td , .section2--section-table--container td
+{
+    /*Todos los datos de la tabla*/
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+/*Bordes*/
+.section1--section-table--container .table__top-left , .section2--section-table--container .table__top-left{
+    border-top-left-radius: 15px;
+}
+.section1--section-table--container .table__top-right , .section2--section-table--container .table__top-right{
+    border-top-right-radius: 15px;
+}
+.section1--section-table--container .table__bottom-right , .section2--section-table--container .table__bottom-right{
+    border-bottom-right-radius: 15px;
+}
+.section1--section-table--container .table__botton-left , .section2--section-table--container .table__botton-left{
+    border-bottom-left-radius: 15px;
+}
+/*Todo lo que está a la izquierda*/
+.section1--section-table--container .table__left , .section2--section-table--container .table__left{
+    text-align: left;
+}
+.section1--section-table--container .table__right , .section2--section-table--container .table__right{
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+
+}
+.table__right .down{
+    display: inline-block;
+    background-image: url(assets/icons/trending-down.svg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    width: 15px;
+    margin-left: 10px;
+    height: 15px;
+}
+.table__right .up{
+    display: inline-block;
+    background-image: url(/assets/icons/trending-up.svg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    width: 15px;
+    margin-left: 10px;
+    height: 15px;
+}
+.table2--update
+{
+    max-width: 800px;
+    margin-top: 16px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--soft-blue);  
+    margin-left: 0px;  
+}
+.table1--update
+{
+    max-width: 800px;
+    margin-top: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 10px;    
+    border-radius: 8px;
+    background-color: var(--soft-orange);    
+}
+.table1--update p , .table2--update p{
+    color: var(--warm-black);
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 300;
+}
+.table1--update b , .table2--update b{
+    font-weight: 700;
+}
+/*Flechas*/
+/*.table-go-right
+{
+    display: flex;
+    transform: translatex(calc(50% + 150px)) translatey(calc(50% - 200px));
+    top: 60px;
+    right: -40px;
+    padding: 15px;
+    top: calc(50% - 20px); 
+}
+*/
+.table-go-right{
+    position: absolute; /*Nos permite movernos entre div´s
+    izquierda, derecha, arriba, abajo*/
+    left: calc(50% + 140px); /*Para centrarlo*/
+    top: calc(100% + 215px);
+    /*display: block; */
+    width: 10px;
+    height: 10px;
+}
+.table-go-left
+{
+    position: absolute; /*Nos permite movernos entre div´s
+    izquierda, derecha, arriba, abajo*/
+    left: calc(50% - 140px); /*Para centrarlo*/
+    top: calc(100% + 215px);
+    /*display: block; */
+    width: 10px;
+    height: 10px;
+    transform: rotate(0.5turn);
+}
