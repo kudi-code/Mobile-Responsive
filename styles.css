@@ -10,7 +10,7 @@
     --soft-orange: #ffe9d5;
     --secondary-blue: #1a9af7;
     --soft-blue: #e7f5ff;
-    --warm-black: #282623;
+    --warm-black: #201E1C;
     --black: #201e1c;
     --grey: #bababa;
     --off-white: #faf8f7;
@@ -315,7 +315,7 @@ main{
     izquierda, derecha, arriba, abajo*/
     left: calc(50% + 140px); /*Para centrarlo*/
     top: calc(100% + 215px);
-    /*display: block; */
+    display: grid;
     width: 10px;
     height: 10px;
 }
@@ -329,4 +329,87 @@ main{
     width: 10px;
     height: 10px;
     transform: rotate(0.5turn);
+}
+.section2
+{
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--warm-black);
+    max-width: 550px;
+}
+
+.section2--batata
+{
+    margin: 20px auto;
+    width: 30px;
+    height: 20px;   
+    background-image: url(/assets/icons/batata.svg);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    display: inline-block;
+    transform: translateY(-75px) translatex(-30px);    
+    border-radius: 10px;
+}
+
+.section2--title h2
+{
+    margin-top: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+.section2--title p
+{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 18px;
+    margin-top: 20px;
+    color: #808080;
+}
+.section2--time , .section2--see , .section2--money , .section2--info
+{
+    margin: 20px auto;
+    width: 90%;
+    height: auto;    
+    background-color: #282623;
+    text-align: left;
+    padding: 18px 18px 18px 18px;
+    border-radius: 10px;
+}
+.section2--time .watch , .section2--see .eye , .section2--money .price , .section2--info .info
+{
+    display: inline-block;       
+    background-position: left ;
+    background-repeat: no-repeat;
+    width: 20px;
+    padding: 15px;
+    height: 20px;
+}
+.section2--time .watch {background-image: url(assets/icons/clock.svg);}
+.section2--see .eye {background-image: url(assets/icons/eye.svg);}
+.section2--money .price {background-image: url(assets/icons/dollar-sign.svg);}
+.section2--info .info {background-image: url(assets/icons/check-circle.svg);}
+
+.section2 h3
+{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+.section2 p
+{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #808080;
 }
