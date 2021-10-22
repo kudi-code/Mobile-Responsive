@@ -576,7 +576,6 @@ footer
     flex-direction: column; /*Los objetos irán de arriba a abajo*/
     justify-content: center;
     margin-left: 55px;
-    margin-top:20px;
 }
 .footer--links a{
     font-size: 14px;
