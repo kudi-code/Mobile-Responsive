@@ -166,7 +166,7 @@ main{
     min-width: 235px;
     max-width: 500px;
     height: 320px;
-    margin: 0 auto;
+    margin: 0 0px;
 }
 .section-tables-container::-webkit-scrollbar
 {
@@ -183,6 +183,10 @@ main{
     margin: 0 auto;
     margin-right: 80px;
     font-family: 'Inter', sans-serif;
+}
+.section2--section-table--title
+{
+    margin-right: -50px; 
 }
 .section1--section-table--title .table--title
 {
@@ -203,7 +207,8 @@ main{
     line-height: 2.3rem;
     color: var(--secondary-blue);
     text-align: left;
-    margin-left: 0px;    
+    margin-left: 0px;
+       
 }
 .section1--section-table--container , .section2--section-table--container
 {
@@ -216,6 +221,7 @@ main{
 .section2--section-table--container
 {
     margin-left: 0px;
+    margin-right: -200px;
 }
 .section1--section-table--container table , .section2--section-table--container table
 {
@@ -326,12 +332,14 @@ main{
     transform: translateX(130px) translateY(90px);
     width: 10px;
     height: 10px;
+    scroll-snap-type: x mandatory;
 }
 .table-go-left--arrow{
     display: inline-block;
-    transform: translateX(-330px) translateY(128px) rotate(0.5turn);;
+    transform: translateX(-200px) translateY(128px) rotate(0.5turn);;
     width: 10px;
     height: 10px;
+    scroll-snap-type: x mandatory;
 }
 .section2
 {
@@ -561,7 +569,8 @@ main{
 .section4--price--choose img{
    /* transform: rotate(0.5turn);*/
     display: inline-block;
-    transform: translateY(7px);    
+    transform: translateY(7px);
+    /*vertical-align:text-bottom;*/    
 }
 footer
 {
