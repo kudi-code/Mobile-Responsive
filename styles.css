@@ -26,6 +26,7 @@ html {
     font-size: 62.7%; /*?para hacer uso del rem y no de px*/
     font-family: 'DM Sans', sans-serif; /*Font por defecto*/
     /*font-family: 'Inter', sans-serif; */
+    scroll-behavior: smooth;
 }
 header {
     /*1.*/
@@ -89,7 +90,11 @@ header img{
     border-radius: 5px;
     font-size: 1.4rem;
     font-weight: bold;
-    color: black;
+    color: black;    
+}
+.header--button:active
+{
+    
 }
 .header--button span
 {
@@ -418,11 +423,12 @@ main{
     min-width: 320px;
     height: 50vh; /*vh es el 100% del contenedor*/
     min-height: 350px;
+    max-width: 550px;
     background-image: url(assets/img/bitcoinbaby2x.jpg);
     background-size: cover; /*Cubre todo el section*/
     background-repeat: no-repeat;
     background-position: center;
-    
+    margin: 0 auto;    
 } 
 .section3 h2{
     padding-top: 65px;
@@ -463,7 +469,7 @@ main{
 {       
     width: 60%;
     height: 247px;
-    max-width: 500px;
+    max-width: 200px;
     border-radius: 10px;
     background-color: var(--just-white);
     margin: 0 auto;
@@ -569,6 +575,7 @@ footer
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0 auto;
 }
 .footer--links
 {    
