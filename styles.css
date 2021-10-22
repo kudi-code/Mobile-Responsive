@@ -568,13 +568,16 @@ main{
 {
     width: 150px;
     background-color: #FAF8F7;
-    border: 2px solid #F7931A;
     box-sizing: border-box;
     border-radius: 4px;
     padding: 12px;      
     justify-content: center;
     margin: 15px auto;
 }
+.section4--price--choose{border: 2px solid #F7931A;}
+.section4--price--choose2{border: 2px solid var(--secondary-blue);}
+.section4--price--choose3{border: 2px solid red}
+
 .section4--price--choose h3 , .section4--price--choose2 h3 , .section4--price--choose3 h3 
 {    
     margin-top: -10px;
