@@ -471,30 +471,45 @@ main{
     font-size: 14px;
     line-height: 18px;
 }
-.section4--price
-{       
-    width: 60%;
+.section4--cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    justify-content: center;
+}
+.section4--price , .section4--price2 , .section4--price3
+{     
+    position: relative; 
+    scroll-snap-align: center;
+    width: 200px;
+    min-width: 200px;
     height: 247px;
-    max-width: 200px;
     border-radius: 10px;
     background-color: var(--just-white);
-    margin: 0 auto;
+    margin: 0 30px 30px;
     margin-top: 30px;
     text-align: center;
     justify-content: center;
     box-shadow: 0px 4px 8px 0px #59491E29;
 }
-.section4--price--tag
+.section4--price{margin-left: 600px;}
+.section4--price3{margin-right: 80px;}
+.section4--price--tag , .section4--price--tag2 , .section4--price--tag3
 {    
     margin: 0 auto;
     transform: translatey(-15px);
     width: 30%;
     min-width: 100px;
-    justify-content: center;
-    background-color: var(--bitcoin-orange);    
+    justify-content: center;     
     border-radius: 10px;
 }
-.section4--price--tag h3
+.section4--price--tag{background-color: var(--bitcoin-orange);} 
+.section4--price--tag2{background-color: var(--secondary-blue);}
+.section4--price--tag3{background-color: red;} 
+
+.section4--price--tag h3 , .section4--price--tag2 h3 , .section4--price--tag3 h3
 {    
     font-family: 'Inter', sans-serif;
     font-size: 12px;
@@ -506,19 +521,19 @@ main{
     color: var(--just-white);
     padding: 8px;
 }
-.section4--price--text
+.section4--price--text , .section4--price--text2 , .section4--price--text
 {
     padding-left: 16px;
     padding-right: 16px;
 }
-.section4--price--text h3
+.section4--price--text h3 , .section4--price--text2 h3 , .section4--price--text3 h3
 {
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: #000;
 }
-.section4--price--text span sup
+.section4--price--text span sup , .section4--price--text2 span sup , .section4--price--text3 span sup
 {
     display: inline-block;
     transform: translatey(-10px) translateX(-10px);
@@ -528,7 +543,7 @@ main{
     line-height: 1.5rem;
     color: #000;
 }
-.section4--price--text p
+.section4--price--text p ,.section4--price--text2 p , .section4--price--text3 p
 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -537,7 +552,7 @@ main{
     color: #000;
     letter-spacing: -.08em;
 }
-.section4--price--text h4
+.section4--price--text h4 , .section4--price--text2 h4 , .section4--price--text3 h4
 {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
@@ -546,18 +561,21 @@ main{
     line-height: 15px;
     color: #757575;
 }
-.section4--price--choose
+.section4--price--text2 h4 , .section4--price--text3 h4{
+    padding: 8px;
+}
+.section4--price--choose , .section4--price--choose2 , .section4--price--choose3
 {
+    width: 150px;
     background-color: #FAF8F7;
     border: 2px solid #F7931A;
     box-sizing: border-box;
     border-radius: 4px;
     padding: 12px;      
     justify-content: center;
-    max-width: 300px;  
     margin: 15px auto;
 }
-.section4--price--choose h3
+.section4--price--choose h3 , .section4--price--choose2 h3 , .section4--price--choose3 h3 
 {    
     margin-top: -10px;
     font-size: 14px;
@@ -566,7 +584,8 @@ main{
     line-height: 18px;
     color: var(--warm-black);
 }
-.section4--price--choose img{
+.section4--price--choose img , .section4--price--choose2 img , .section4--price--choose3 img
+{
    /* transform: rotate(0.5turn);*/
     display: inline-block;
     transform: translateY(7px);
