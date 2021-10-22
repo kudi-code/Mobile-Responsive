@@ -304,21 +304,9 @@ main{
 .table1--update b , .table2--update b{
     font-weight: 700;
 }
-/*Flechas*/
-/*.table-go-right
-{
-    display: flex;
-    transform: translatex(calc(50% + 150px)) translatey(calc(50% - 200px));
-    top: 60px;
-    right: -40px;
-    padding: 15px;
-    top: calc(50% - 20px); 
-}
-*/
-.table-go-right{
-    position: absolute; /*Nos permite movernos entre div´s
-    izquierda, derecha, arriba, abajo*/
-    left: calc(50% + 140px); /*Para centrarlo*/
+/*.table-go-right{
+    position: absolute; 
+    left: calc(50% + 140px); 
     top: calc(100% + 215px);
     display: grid;
     width: 10px;
@@ -326,14 +314,24 @@ main{
 }
 .table-go-left
 {
-    position: absolute; /*Nos permite movernos entre div´s
-    izquierda, derecha, arriba, abajo*/
-    left: calc(50% - 140px); /*Para centrarlo*/
-    top: calc(100% + 215px);
-    /*display: block; */
+    position: absolute; 
+    left: calc(50% - 140px); 
+    top: calc(100% + 215px);   
     width: 10px;
     height: 10px;
     transform: rotate(0.5turn);
+}*/
+.table-go-right--arrow{
+    display: inline-block;
+    transform: translateX(130px) translateY(90px);
+    width: 10px;
+    height: 10px;
+}
+.table-go-left--arrow{
+    display: inline-block;
+    transform: translateX(-330px) translateY(128px) rotate(0.5turn);;
+    width: 10px;
+    height: 10px;
 }
 .section2
 {
