@@ -418,7 +418,7 @@ main{
     min-width: 320px;
     height: 50vh; /*vh es el 100% del contenedor*/
     min-height: 350px;
-    background-image: url(/assets/img/bitcoinbaby2x.jpg);
+    background-image: url(assets/img/bitcoinbaby2x.jpg);
     background-size: cover; /*Cubre todo el section*/
     background-repeat: no-repeat;
     background-position: center;
